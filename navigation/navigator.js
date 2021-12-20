@@ -10,6 +10,7 @@ const Stack = createStackNavigator();
 
 export function MyStack() {
   return (
+    <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen
         name="Home"
@@ -22,6 +23,7 @@ export function MyStack() {
         options={{ title: "Settings screen" }}
       />
     </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -29,7 +31,7 @@ const Tab = createBottomTabNavigator();
 
 export function TabNavigator() {
   return (
-    <NavigationContainer>
+    
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -93,6 +95,6 @@ export function TabNavigator() {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
+    
   );
 }
